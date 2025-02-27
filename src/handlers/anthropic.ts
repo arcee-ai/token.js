@@ -381,9 +381,10 @@ export const getDefaultMaxTokens = (model: string): number => {
     model === 'claude-3-haiku-20240307' ||
     model === 'claude-2.1' ||
     model === 'claude-2.0' ||
-    model === 'claude-instant-1.2'
+    model === 'claude-instant-1.2' ||
+    model === 'claude-3-7-sonnet-20250219'
   ) {
-    return 4096
+    return 8192
   } else {
     throw new InputError(`Unknown model: ${model}`)
   }
